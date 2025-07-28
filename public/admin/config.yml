@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: bernd-lab/stream-info-blog   # <-- hier anpassen
+  branch: main
+
+media_folder: "public/uploads"      # Dateien liegen im Repo
+public_folder: "/uploads"           # URL, unter der sie erreichbar sind
+
+collections:
+  - name: "blog"
+    label: "Blog-Beiträge"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel",        name: "title",       widget: "string" }
+      - { label: "Beschreibung", name: "description", widget: "text" }
+      - { label: "Autor",        name: "author",      widget: "string" }
+      - { label: "Datum",        name: "pubDate",     widget: "datetime" }
+      - { label: "Hero-Bild",    name: "heroImage",   widget: "image", required: false }
+      - { label: "Inhalt",       name: "body",        widget: "markdown" }
