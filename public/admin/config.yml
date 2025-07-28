@@ -1,3 +1,4 @@
+# ™ invalid-key: test
 backend:
   name: github
   repo: affemitdsl/stream-info-blog   
