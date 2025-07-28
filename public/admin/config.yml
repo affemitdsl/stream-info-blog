@@ -1,22 +1,21 @@
-# ™ invalid-key: test
 backend:
   name: github
-  repo: affemitdsl/stream-info-blog   
+  repo: affemitdsl/stream-info-blog
   branch: master
-
-media_folder: "public/uploads"      # Dateien liegen im Repo
-public_folder: "/uploads"           # URL, unter der sie erreichbar sind
+  auth_type: pkce
+  app_id: "<GitHub Client ID>"
+  base_url: https://stream-info-blog.pages.dev
+  auth_endpoint: /oauth
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
     label: "Blog-Beiträge"
     folder: "src/content/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Titel",        name: "title",       widget: "string" }
-      - { label: "Beschreibung", name: "description", widget: "text" }
-      - { label: "Autor",        name: "author",      widget: "string" }
-      - { label: "Datum",        name: "pubDate",     widget: "datetime" }
-      - { label: "Hero-Bild",    name: "heroImage",   widget: "image", required: false }
-      - { label: "Inhalt",       name: "body",        widget: "markdown" }
+      - { name: "title", label: "Titel", widget: "string" }
+      - { name: "date", label: "Datum", widget: "datetime" }
+      - { name: "body", label: "Inhalt", widget: "markdown" }
