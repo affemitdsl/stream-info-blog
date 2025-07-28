@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: bernd-lab/stream-info-blog   # <-- hier anpassen
+  repo: affemitdsl/stream-info-blog   
   branch: main
 
 media_folder: "public/uploads"      # Dateien liegen im Repo
