@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: affemitdsl/stream-info-blog   
-  branch: main
+  branch: master
 
 media_folder: "public/uploads"      # Dateien liegen im Repo
 public_folder: "/uploads"           # URL, unter der sie erreichbar sind
